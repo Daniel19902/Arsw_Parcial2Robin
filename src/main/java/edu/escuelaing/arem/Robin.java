@@ -12,21 +12,17 @@ import java.net.URL;
 public class Robin {
 
 
-    private String puertoSin = "4568";
-    private String puertoSqrt = "4568";
+    private String[] links = {"http://ec2-52-0-216-223.compute-1.amazonaws.com","http://ec2-user@ec2-3-84-53-107.compute-1.amazonaws.com" };
     private Gson gson = new Gson();
-    private String puerto = "";
+    private int puerto = 0;
 
 
-    public String calcular(String servicio, String numero) throws MalformedURLException {
 
-        if(servicio.equals("")){
-            puerto = puertoSin;
-        }else if(puerto.equals("4568")) {
-            puerto = puertoSqrt;
-        }
+    public String calcular(String servicio, String numero, int puerto) throws MalformedURLException {
 
-        String url = "http://localhost:4568/"+servicio+"/"+numero ;
+
+
+        String url = links[puerto]+":4568/"+servicio+"/"+numero ;
         System.out.println(url);
         URL url1 = new URL(url);
         try {
