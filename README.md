@@ -17,4 +17,4 @@ java -cp "target/classes:target/dependency/*" edu.escuelaing.arem.App
 
 y probamos un ejemplo
 
-![](IMG/aws)
+![](IMG/aws.PNG)
